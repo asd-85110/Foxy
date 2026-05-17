@@ -1,0 +1,35 @@
+BasedOnStyle: LLVM
+Language: Cpp
+IndentWidth: 4
+UseTab: Never
+ColumnLimit: 0
+
+# Pointer alignment: * attached to type
+PointerAlignment: Left
+
+# No space after comma
+SpaceAfterCStyleCast: false
+SpaceBeforeParens: Never
+
+# Brace style: attach to same line
+BreakBeforeBraces: Attach
+
+# Comment spacing
+SpacesBeforeTrailingComments: 0
+
+# Indentation
+IndentCaseLabels: true
+IndentPPDirectives: None
+
+# Alignment
+AlignAfterOpenBracket: DontAlign
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: false
+
+# Empty lines
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# No final newline
+InsertNewlineAtEOF: false

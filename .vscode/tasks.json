@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CMake构建",
+			"type": "shell",
+			"command":"cmake",
+			"args": [
+        "-G",
+        "Ninja",
+        "-B",
+        "build",
+        "-S",
+        "."
+      ],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			}
+		},
+		{
+			"label":"Ninja构建",
+			"type":"shell",
+			"command":"ninja",
+			"args":[
+        "-j4"
+      ],
+			"group":{
+				"kind":"build",
+				"isDefault":true
+			}
+		}
+	]
+}

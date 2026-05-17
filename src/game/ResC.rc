@@ -1,0 +1,28 @@
+
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS 0x40004
+FILETYPE 0x1
+{
+BLOCK "StringFileInfo"
+{
+	BLOCK "040904B0"
+	{
+		VALUE "FileDescription", "Foxy game main"
+		VALUE "InternalName", "game.exe"
+		VALUE "OriginalFilename", "game.exe"
+		VALUE "CompanyName", "asd-85110"
+		VALUE "LegalCopyright", "(C) asd-85110. Copyright under GPL v3."
+		VALUE "ProductName", "Foxy"
+		VALUE "FileVersion", "1.0.0.0"
+		VALUE "ProductVersion", "1.0.0.0"
+	}
+}
+
+BLOCK "VarFileInfo"
+{
+	VALUE "Translation", 0x0409,0x04B0
+}
+}
+100 ICON "icon.ico"
