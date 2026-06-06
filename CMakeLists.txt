@@ -13,7 +13,8 @@ include_directories(${CMAKE_SOURCE_DIR}/package/include)
 link_directories(${CMAKE_SOURCE_DIR}/package/lib)
 add_executable(game
     ${CMAKE_SOURCE_DIR}/src/game/main.cpp
-    ${CMAKE_SOURCE_DIR}/src/game/sprite.cpp)
+    ${CMAKE_SOURCE_DIR}/src/game/sprite.cpp
+    ${CMAKE_SOURCE_DIR}/src/game/ev.cpp)
 add_executable(modifier
     ${CMAKE_SOURCE_DIR}/src/modifier/main.cpp
     ${CMAKE_SOURCE_DIR}/src/modifier/imgui.cpp

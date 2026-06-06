@@ -16,8 +16,9 @@
 #include<raylib.h>
 #include<raygui.h>
 #include<libintl.h>
-#include"include/sprite.hpp"
 #include<clocale>
+#include"include/sprite.hpp"
+#include"include/ev.hpp"
 int main(void)
 {
     char game_play_type='s';
@@ -30,10 +31,10 @@ int main(void)
     SetTargetFPS(60);
     Image icon=LoadImage("../res/Icon.png");
     SetWindowIcon(icon);
+    Event::Init(LoadTexture("../res/Texture/UI_Lifebar_Border.png"),LoadTexture("../res/Texture/UI_Lifebar_Fill_02.png"),LoadTexture("../res/Texture/UI_Lifebar_Fill_01.png"));
     Texture2D bg=LoadTexture("../res/Texture/background1.jpg");
     Music BGM=LoadMusicStream("../res/Sound/doodle_pop.ogg");
-    Font F10=LoadFont("../res/Font/fusion-pixel-10px-monospaced-zh_hans.ttf"),
-        F12=LoadFont("../res/Font/fusion-pixel-12px-monospaced-zh_hans.ttf");
+    Font F12=LoadFont("../res/Font/fusion-pixel-12px-monospaced-zh_hans.fnt");
     sprite::player Player(LoadTexture("../res/Texture/fox.png"),Vector2{400,300},1);
     bool moved;
     PlayMusicStream(BGM);
@@ -42,10 +43,10 @@ int main(void)
     {
         UpdateMusicStream(BGM);
         moved=false;
-        if(IsKeyDown(KEY_W)){
-            Player.UpdateDirection(0);
+        if(IsKeyDown(KEY_S)){
+            Player.UpdateDirection(2);
             Player.animation(Player.walk);
-            Player.position.y-=Player.speed*GetFrameTime()+1;
+            Player.position.y+=Player.speed*GetFrameTime()+1;
             moved=true;
         }
         if(IsKeyDown(KEY_D)){
@@ -54,10 +55,10 @@ int main(void)
             Player.position.x+=Player.speed*GetFrameTime()+1;
             moved=true;
         }
-        if(IsKeyDown(KEY_S)){
-            Player.UpdateDirection(2);
+        if(IsKeyDown(KEY_W)){
+            Player.UpdateDirection(0);
             Player.animation(Player.walk);
-            Player.position.y+=Player.speed*GetFrameTime()+1;
+            Player.position.y-=Player.speed*GetFrameTime()+1;
             moved=true;
         }
         if(IsKeyDown(KEY_A)){
@@ -71,17 +72,27 @@ int main(void)
         }
         BeginDrawing();
             ClearBackground(LIGHTGRAY);
-            DrawTexture(bg,0,0,WHITE);
             switch(game_play_type){
                 case 's':
+                DrawTexture(bg,0,0,WHITE);
                     DrawText("Foxy",315,130,70,ORANGE);
                     if(GuiButton(Rectangle{350,250,100,50},gettext("Let's Play!"))){
                         game_play_type='r';
                     }
+                    if(GuiButton(Rectangle{350,310,100,50},gettext("Settings"))){}
+                    if(GuiButton(Rectangle{350,370,100,50},gettext("Author"))){
+                        game_play_type='a';
+                    }
                     break;
                 case 'r':
                     Player.Draw();
+                    Event::DrawHealth(Vector2{10,10});
                     break;
+                case 'a':
+                    DrawText("Fox.png - Stendhal",10,10,12,BLACK);
+                    if(GuiButton(Rectangle{350,540,100,50},gettext("Back"))){
+                        game_play_type='s';
+                    }
                 default:
                     break;
             }
@@ -91,6 +102,8 @@ int main(void)
     UnloadImage(icon);
     UnloadMusicStream(BGM);
     UnloadTexture(bg);
+    UnloadFont(F12);
+    Event::Quit();
     CloseAudioDevice();
     CloseWindow();
     return 0;
