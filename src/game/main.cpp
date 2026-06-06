@@ -49,16 +49,16 @@ int main(void)
             Player.position.y+=Player.speed*GetFrameTime()+1;
             moved=true;
         }
-        if(IsKeyDown(KEY_D)){
-            Player.UpdateDirection(1);
-            Player.animation(Player.walk);
-            Player.position.x+=Player.speed*GetFrameTime()+1;
-            moved=true;
-        }
         if(IsKeyDown(KEY_W)){
             Player.UpdateDirection(0);
             Player.animation(Player.walk);
             Player.position.y-=Player.speed*GetFrameTime()+1;
+            moved=true;
+        }
+        if(IsKeyDown(KEY_D)){
+            Player.UpdateDirection(1);
+            Player.animation(Player.walk);
+            Player.position.x+=Player.speed*GetFrameTime()+1;
             moved=true;
         }
         if(IsKeyDown(KEY_A)){
@@ -80,7 +80,7 @@ int main(void)
                         game_play_type='r';
                     }
                     if(GuiButton(Rectangle{350,310,100,50},gettext("Settings"))){}
-                    if(GuiButton(Rectangle{350,370,100,50},gettext("Author"))){
+                    if(GuiButton(Rectangle{350,370,100,50},gettext("Credits"))){
                         game_play_type='a';
                     }
                     break;
