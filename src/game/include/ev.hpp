@@ -4,4 +4,6 @@ namespace Event{
     void Quit();
     void DrawHealth(Vector2);
     extern Texture2D health_bar,health,health_fill;
+    extern Texture2D Recycles;
+    extern const Rectangle Recycle[16];
 }

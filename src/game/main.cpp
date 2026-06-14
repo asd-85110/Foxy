@@ -21,18 +21,21 @@
 #include"include/ev.hpp"
 int main(void)
 {
+    ///\brief 初始化游戏模式
     char game_play_type='s';
+    ///\brief 国际化配置
     setlocale(LC_ALL,"");
     bindtextdomain("game", "../locale");
     bind_textdomain_codeset("game", "UTF-8");
     textdomain("game");
+    ///\brief 初始化游戏
     InitWindow(800, 600, "Foxy");
     InitAudioDevice();
     SetTargetFPS(60);
     Image icon=LoadImage("../res/Icon.png");
     SetWindowIcon(icon);
     Event::Init(LoadTexture("../res/Texture/UI_Lifebar_Border.png"),LoadTexture("../res/Texture/UI_Lifebar_Fill_02.png"),LoadTexture("../res/Texture/UI_Lifebar_Fill_01.png"));
-    Texture2D bg=LoadTexture("../res/Texture/background1.jpg");
+    Texture2D bg=LoadTexture("../res/Texture/background.jpg");
     Music BGM=LoadMusicStream("../res/Sound/doodle_pop.ogg");
     Font F12=LoadFont("../res/Font/fusion-pixel-12px-monospaced-zh_hans.fnt");
     sprite::player Player(LoadTexture("../res/Texture/fox.png"),Vector2{400,300},1);
@@ -99,6 +102,7 @@ int main(void)
             DrawText("v0.1.0",10,565,30,RAYWHITE);
         EndDrawing();
     }
+    ///\brief 卸载并退出
     UnloadImage(icon);
     UnloadMusicStream(BGM);
     UnloadTexture(bg);
