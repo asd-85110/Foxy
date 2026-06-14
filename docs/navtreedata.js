@@ -24,12 +24,26 @@
 */
 var NAVTREE =
 [
-  [ "The game doFoxy with modifier", "index.html", ]
+  [ "The game doFoxy with modifier", "index.html", [
+    [ "类", "annotated.html", [
+      [ "类列表", "annotated.html", "annotated_dup" ],
+      [ "类索引", "classes.html", null ],
+      [ "类成员", "functions.html", [
+        [ "全部", "functions.html", null ],
+        [ "函数", "functions_func.html", null ],
+        [ "变量", "functions_vars.html", null ],
+        [ "枚举", "functions_enum.html", null ]
+      ] ]
+    ] ],
+    [ "文件", "files.html", [
+      [ "文件列表", "files.html", "files_dup" ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

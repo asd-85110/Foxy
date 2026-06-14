@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The game doFoxy with modifier: src/game/include/sprite.hpp 源文件</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">The game doFoxy with modifier<span id="projectnumber">&#160;2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('sprite_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sprite.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">*Game:Foxy</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">*Copyright (C) 2026~2028 asd-85110</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">*This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">*it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">*(at your option) any later version.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">*This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">*MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">*GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">*You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef SPRITE_HPP</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define SPRITE_HPP</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include&lt;raylib.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include&lt;vector&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include&lt;string&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include&lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span>sprite{</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structsprite_1_1item.html">   23</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="structsprite_1_1item.html#adc146adcd52baf9791cee017592377d8">item</a>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        Texture2D texture;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structsprite_1_1item.html#ad776c372072c9b4b0a54553d15d42072">   25</a></span>        Rectangle <a class="code hl_variable" href="structsprite_1_1item.html#ad776c372072c9b4b0a54553d15d42072">bounds</a>={0,0,16,16};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structsprite_1_1item.html#a29abba75fef456d60150824a4ae01c9f">   26</a></span>        std::string <a class="code hl_variable" href="structsprite_1_1item.html#a29abba75fef456d60150824a4ae01c9f">name</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_function" href="structsprite_1_1item.html#adc146adcd52baf9791cee017592377d8">item</a>(Texture2D t,std::string n);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="structsprite_1_1item.html#adc146adcd52baf9791cee017592377d8">~item</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
+</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classsprite_1_1player.html">   36</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classsprite_1_1player.html#a3448420ca8f7e6f86b22ad6ddbba0d24">player</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">//Frame w=48,h=64</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Vector2 Frame={0,0};<span class="comment">// 纹理帧位置.[0]行,[1]列</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Texture2D texture;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        Rectangle bounds={0,0,48,64};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        std::uint64_t xp;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        std::vector&lt;item&gt; carry_things;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> FrameSpeed=0.125;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">float</span> timer=0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classsprite_1_1player.html#ac3d78a021a4c6cd4728a288292d3c46b">   48</a></span>        std::uint8_t <a class="code hl_variable" href="classsprite_1_1player.html#ac3d78a021a4c6cd4728a288292d3c46b">health</a>,speed,damge;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classsprite_1_1player.html#aceca2d6a0a2151d250e315285b1c4fb3">   49</a></span>        Vector2 <a class="code hl_variable" href="classsprite_1_1player.html#aceca2d6a0a2151d250e315285b1c4fb3">position</a>;</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classsprite_1_1player.html#a2d708cadfb2d490d958151bbbed42933">   50</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="classsprite_1_1player.html#a2d708cadfb2d490d958151bbbed42933">tags</a>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            idle=0,<span class="comment">// 枚举空闲标签</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            walk=1,<span class="comment">// 枚举行走标签(有动画)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            attack=2,<span class="comment">// 枚举攻击标签(无动画)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            dead=3<span class="comment">// 枚举玩家死亡标签</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        };</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsprite_1_1player.html#a71a5640b7941b68519eb7ad1852f901f">animation</a>(<a class="code hl_enumeration" href="classsprite_1_1player.html#a2d708cadfb2d490d958151bbbed42933">tags</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsprite_1_1player.html#a5c9b4d239a1cf0d10a6aaded4b2e2eb3">Draw</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsprite_1_1player.html#a5b2a3cf0f3ec1ac0d614a0c3e492366d">UpdateDirection</a>(std::uint16_t);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_function" href="classsprite_1_1player.html#a3448420ca8f7e6f86b22ad6ddbba0d24">player</a>(Texture2D,Vector2,std::uint8_t);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_function" href="classsprite_1_1player.html#aa9b49035c8c1ca00321be19f94752f92">~player</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    };</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasssprite_1_1player_html_a2d708cadfb2d490d958151bbbed42933"><div class="ttname"><a href="classsprite_1_1player.html#a2d708cadfb2d490d958151bbbed42933">sprite::player::tags</a></div><div class="ttdeci">tags</div><div class="ttdoc">玩家位置</div><div class="ttdef"><b>定义</b> <a href="#l00050">sprite.hpp:50</a></div></div>
+<div class="ttc" id="aclasssprite_1_1player_html_a3448420ca8f7e6f86b22ad6ddbba0d24"><div class="ttname"><a href="classsprite_1_1player.html#a3448420ca8f7e6f86b22ad6ddbba0d24">sprite::player::player</a></div><div class="ttdeci">player(Texture2D, Vector2, std::uint8_t)</div><div class="ttdoc">玩家构造函数</div><div class="ttdef"><b>定义</b> <a href="sprite_8cpp_source.html#l00017">sprite.cpp:17</a></div></div>
+<div class="ttc" id="aclasssprite_1_1player_html_a5b2a3cf0f3ec1ac0d614a0c3e492366d"><div class="ttname"><a href="classsprite_1_1player.html#a5b2a3cf0f3ec1ac0d614a0c3e492366d">sprite::player::UpdateDirection</a></div><div class="ttdeci">void UpdateDirection(std::uint16_t)</div><div class="ttdoc">玩家方向函数</div><div class="ttdef"><b>定义</b> <a href="sprite_8cpp_source.html#l00047">sprite.cpp:47</a></div></div>
+<div class="ttc" id="aclasssprite_1_1player_html_a5c9b4d239a1cf0d10a6aaded4b2e2eb3"><div class="ttname"><a href="classsprite_1_1player.html#a5c9b4d239a1cf0d10a6aaded4b2e2eb3">sprite::player::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdoc">玩家绘制函数</div><div class="ttdef"><b>定义</b> <a href="sprite_8cpp_source.html#l00044">sprite.cpp:44</a></div></div>
+<div class="ttc" id="aclasssprite_1_1player_html_a71a5640b7941b68519eb7ad1852f901f"><div class="ttname"><a href="classsprite_1_1player.html#a71a5640b7941b68519eb7ad1852f901f">sprite::player::animation</a></div><div class="ttdeci">void animation(tags)</div><div class="ttdoc">玩家动画处理函数</div><div class="ttdef"><b>定义</b> <a href="sprite_8cpp_source.html#l00024">sprite.cpp:24</a></div></div>
+<div class="ttc" id="aclasssprite_1_1player_html_aa9b49035c8c1ca00321be19f94752f92"><div class="ttname"><a href="classsprite_1_1player.html#aa9b49035c8c1ca00321be19f94752f92">sprite::player::~player</a></div><div class="ttdeci">~player()</div><div class="ttdoc">玩家析构函数</div><div class="ttdef"><b>定义</b> <a href="sprite_8cpp_source.html#l00021">sprite.cpp:21</a></div></div>
+<div class="ttc" id="aclasssprite_1_1player_html_ac3d78a021a4c6cd4728a288292d3c46b"><div class="ttname"><a href="classsprite_1_1player.html#ac3d78a021a4c6cd4728a288292d3c46b">sprite::player::health</a></div><div class="ttdeci">std::uint8_t health</div><div class="ttdoc">计时器，用于控制动画帧率</div><div class="ttdef"><b>定义</b> <a href="#l00048">sprite.hpp:48</a></div></div>
+<div class="ttc" id="aclasssprite_1_1player_html_aceca2d6a0a2151d250e315285b1c4fb3"><div class="ttname"><a href="classsprite_1_1player.html#aceca2d6a0a2151d250e315285b1c4fb3">sprite::player::position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdoc">玩家属性</div><div class="ttdef"><b>定义</b> <a href="#l00049">sprite.hpp:49</a></div></div>
+<div class="ttc" id="astructsprite_1_1item_html_a29abba75fef456d60150824a4ae01c9f"><div class="ttname"><a href="structsprite_1_1item.html#a29abba75fef456d60150824a4ae01c9f">sprite::item::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">纹理边界框</div><div class="ttdef"><b>定义</b> <a href="#l00026">sprite.hpp:26</a></div></div>
+<div class="ttc" id="astructsprite_1_1item_html_ad776c372072c9b4b0a54553d15d42072"><div class="ttname"><a href="structsprite_1_1item.html#ad776c372072c9b4b0a54553d15d42072">sprite::item::bounds</a></div><div class="ttdeci">Rectangle bounds</div><div class="ttdoc">纹理对象</div><div class="ttdef"><b>定义</b> <a href="#l00025">sprite.hpp:25</a></div></div>
+<div class="ttc" id="astructsprite_1_1item_html_adc146adcd52baf9791cee017592377d8"><div class="ttname"><a href="structsprite_1_1item.html#adc146adcd52baf9791cee017592377d8">sprite::item::item</a></div><div class="ttdeci">item(Texture2D t, std::string n)</div><div class="ttdoc">纹理名称</div><div class="ttdef"><b>定义</b> <a href="sprite_8cpp_source.html#l00050">sprite.cpp:50</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>src</b></li><li class="navelem"><b>game</b></li><li class="navelem"><b>include</b></li><li class="navelem"><b>sprite.hpp</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,3 +1,17 @@
+/*
+*Game:Foxy
+*Copyright (C) 2026~2028 asd-85110
+*This program is free software: you can redistribute it and/or modify
+*it under the terms of the GNU General Public License as published by
+*the Free Software Foundation, either version 3 of the License, or
+*(at your option) any later version.
+*This program is distributed in the hope that it will be useful,
+*but WITHOUT ANY WARRANTY; without even the implied warranty of
+*MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*GNU General Public License for more details.
+*You should have received a copy of the GNU General Public License
+*along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 #include"include/ev.hpp"
 namespace Event{
     Texture2D health_bar,health,health_fill;
@@ -31,9 +45,9 @@ namespace Event{
         UnloadTexture(health);
         UnloadTexture(health_fill);
     }
-    void DrawHealth(Vector2 P){
+    void DrawHealth(Vector2 P,std::uint8_t H){
         DrawTexture(health,P.x,P.y,WHITE);
-        DrawTexture(health_fill,P.x,P.y,WHITE);
+        DrawTextureRec(health_fill,Rectangle{0,0,(float)(H+5),32},P,WHITE);
         DrawTexture(health_bar,P.x,P.y,WHITE);
     }
 }

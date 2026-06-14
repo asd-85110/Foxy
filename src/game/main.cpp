@@ -89,7 +89,7 @@ int main(void)
                     break;
                 case 'r':
                     Player.Draw();
-                    Event::DrawHealth(Vector2{10,10});
+                    Event::DrawHealth(Vector2{10,10},Player.health);
                     break;
                 case 'a':
                     DrawText("Fox.png - Stendhal",10,10,12,BLACK);
