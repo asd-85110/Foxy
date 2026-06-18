@@ -12,6 +12,9 @@
 *You should have received a copy of the GNU General Public License
 *along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+#pragma once
+#ifndef EV_HPP
+#define EV_HPP
 #include<raylib.h>
 #include<cstdint>
 namespace Event{
@@ -37,3 +40,4 @@ namespace Event{
     extern Texture2D Recycles;
     extern const Rectangle Recycle[16];
 }
+#endif

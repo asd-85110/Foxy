@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-17 21:30+0800\n"
+"POT-Creation-Date: 2026-06-18 20:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,9 +30,37 @@ msgid "Modifier Window"
 msgstr ""
 
 #: d:\projects\game-Foxy\src\modifier\main.cpp:85
-msgid "Click"
+msgid "Health"
 msgstr ""
 
 #: d:\projects\game-Foxy\src\modifier\main.cpp:87
+msgid "Set health"
+msgstr ""
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:88
+msgid "Speed"
+msgstr ""
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:90
+msgid "Set speed"
+msgstr ""
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:91
+msgid "Damge"
+msgstr ""
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:93
+msgid "Set damge"
+msgstr ""
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:94
+msgid "XP"
+msgstr ""
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:96
+msgid "Set XP"
+msgstr ""
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:98
 msgid "Count Window"
 msgstr ""

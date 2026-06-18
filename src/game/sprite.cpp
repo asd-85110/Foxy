@@ -14,9 +14,10 @@
 */
 #include"include/sprite.hpp"
 namespace sprite{
-    player::player(Texture2D t,Vector2 p,std::uint8_t s){
+    player::player(Texture2D t,Vector2 p,std::uint8_t h){
         texture=t;
         position=p;
+        health=h;
     }
     player::~player(){
         UnloadTexture(texture);

@@ -18,4 +18,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
 #include <GLFW/glfw3.h>
 namespace Tools{
     GLFWimage* load_png(const char* filename, int* width, int* height);
+    extern int Values[4];
 }

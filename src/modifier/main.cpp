@@ -82,7 +82,18 @@ int main(void){
             ImGui::Text("Copyright (c) 2026~2028, asd-85110");
         ImGui::End();
         ImGui::Begin(gettext("Modifier Window"));
-            ImGui::Button(gettext("Click"));
+            if(ImGui::InputInt(gettext("Health"),&Tools::Values[0])){}
+            ImGui::SameLine();
+            if(ImGui::Button(gettext("Set health"),ImVec2(60,20))){}
+            if(ImGui::InputInt(gettext("Speed"),&Tools::Values[1])){}
+            ImGui::SameLine();
+            if(ImGui::Button(gettext("Set speed"),ImVec2(60,20))){}
+            if(ImGui::InputInt(gettext("Damge"),&Tools::Values[2])){}
+            ImGui::SameLine();
+            if(ImGui::Button(gettext("Set damge"),ImVec2(60,20))){}
+            if(ImGui::InputInt(gettext("XP"),&Tools::Values[3])){}
+            ImGui::SameLine();
+            if(ImGui::Button(gettext("Set XP"),ImVec2(60,20))){}
         ImGui::End();
         ImGui::Begin(gettext("Count Window"));
         ImGui::End();

@@ -38,7 +38,7 @@ int main(void)
     Texture2D bg=LoadTexture("../res/Texture/background.jpg");
     Music BGM=LoadMusicStream("../res/Sound/doodle_pop.ogg");
     Font F12=LoadFont("../res/Font/fusion-pixel-12px-monospaced-zh_hans.fnt");
-    sprite::player Player(LoadTexture("../res/Texture/fox.png"),Vector2{400,300},1);
+    sprite::player Player(LoadTexture("../res/Texture/fox.png"),Vector2{376,268},255);
     bool moved;
     PlayMusicStream(BGM);
     GuiSetFont(F12);
@@ -73,6 +73,12 @@ int main(void)
         if(!moved){
             Player.animation(Player.idle);
         }
+        if(IsKeyDown(KEY_UP)&&Player.health<255){
+            Player.health++;
+        }
+        if(IsKeyDown(KEY_DOWN)&&Player.health>0){
+            Player.health--;
+        }
         BeginDrawing();
             ClearBackground(LIGHTGRAY);
             switch(game_play_type){
@@ -82,7 +88,9 @@ int main(void)
                     if(GuiButton(Rectangle{350,250,100,50},gettext("Let's Play!"))){
                         game_play_type='r';
                     }
-                    if(GuiButton(Rectangle{350,310,100,50},gettext("Settings"))){}
+                    if(GuiButton(Rectangle{350,310,100,50},gettext("Settings"))){
+                        game_play_type='c';
+                    }
                     if(GuiButton(Rectangle{350,370,100,50},gettext("Credits"))){
                         game_play_type='a';
                     }
@@ -90,6 +98,8 @@ int main(void)
                 case 'r':
                     Player.Draw();
                     Event::DrawHealth(Vector2{10,10},Player.health);
+                    break;
+                case 'c':
                     break;
                 case 'a':
                     DrawText("Fox.png - Stendhal",10,10,12,BLACK);

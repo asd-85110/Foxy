@@ -15,7 +15,7 @@
 #include"include/ev.hpp"
 namespace Event{
     Texture2D health_bar,health,health_fill;
-    Texture2D Recycles=LoadTexture("../res/Texture/recycle_items.png");
+    Texture2D Recycles;
     const Rectangle Recycle[16]={
         {2,17,15,45},//矿泉水瓶
         {19,7,39,55},//大洗衣液桶
@@ -35,19 +35,25 @@ namespace Event{
         {496,22,17,40}//喷漆瓶
     };
     bool Init(Texture2D B,Texture2D H,Texture2D F){
-        health_bar=B;
-        health=H;
-        health_fill=F;
-        return true;
+        if(IsTextureValid(B)&&IsTextureValid(H)&&IsTextureValid(F)){
+            health_bar=B;
+            health=H;
+            health_fill=F;
+        }else{
+            return false;
+        }
+        Recycles=LoadTexture("../res/Texture/recycle_items.png");
+        return IsTextureValid(Recycles);
     }
     void Quit(){
         UnloadTexture(health_bar);
         UnloadTexture(health);
         UnloadTexture(health_fill);
+        UnloadTexture(Recycles);
     }
     void DrawHealth(Vector2 P,std::uint8_t H){
         DrawTexture(health,P.x,P.y,WHITE);
-        DrawTextureRec(health_fill,Rectangle{0,0,(float)(H+5),32},P,WHITE);
+        DrawTextureRec(health_fill,Rectangle{0,0,(float)(((float)(H)/255*100)+5),32},P,WHITE);
         DrawTexture(health_bar,P.x,P.y,WHITE);
     }
 }

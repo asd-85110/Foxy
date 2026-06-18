@@ -1,39 +1,69 @@
-# Chinese translations for PACKAGE package
-# PACKAGE .
-# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# <EMAIL@ADDRESS>, 2026.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-17 21:30+0800\n"
-"PO-Revision-Date: 2026-04-11 18:54+0800\n"
-"Last-Translator: <1703115048@qq.com>\n"
-"Language-Team: Chinese (simplified)\n"
-"Language: zh_CN\n"
+"POT-Creation-Date: 2026-06-18 20:03+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: d:\projects\game-Foxy\src\modifier\main.cpp:43
 msgid "Foxy Modifier"
-msgstr "Foxy 修改器"
+msgstr "Foxy修改器"
 
 #: d:\projects\game-Foxy\src\modifier\main.cpp:80
 msgid "LICENSE window"
-msgstr "许可证窗口"
+msgstr "许可证"
 
 #: d:\projects\game-Foxy\src\modifier\main.cpp:84
 msgid "Modifier Window"
-msgstr "修改器窗口"
+msgstr "修改器"
 
 #: d:\projects\game-Foxy\src\modifier\main.cpp:85
-msgid "Click"
-msgstr "点击"
+msgid "Health"
+msgstr "血量"
 
 #: d:\projects\game-Foxy\src\modifier\main.cpp:87
+msgid "Set health"
+msgstr "设置血量"
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:88
+msgid "Speed"
+msgstr "速度"
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:90
+msgid "Set speed"
+msgstr "设置速度"
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:91
+msgid "Damge"
+msgstr "伤害"
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:93
+msgid "Set damge"
+msgstr "设置伤害"
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:94
+msgid "XP"
+msgstr "经验值"
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:96
+msgid "Set XP"
+msgstr "设置经验值"
+
+#: d:\projects\game-Foxy\src\modifier\main.cpp:98
 msgid "Count Window"
-msgstr "统计数据"
+msgstr "统计信息"
+
+#~ msgid "Click"
+#~ msgstr "点击"

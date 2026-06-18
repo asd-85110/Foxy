@@ -1,34 +1,19 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{
-			"label": "CMake构建",
-			"type": "shell",
-			"command":"cmake",
-			"args": [
-        "-G",
-        "Ninja",
-        "-B",
-        "build",
-        "-S",
-        "."
+    {
+      "type": "process",
+      "command": "./ab",
+      "args": [
+        "Debug"
       ],
-			"group": {
-				"kind": "build",
-				"isDefault": false
-			}
-		},
-		{
-			"label":"Ninja构建",
-			"type":"shell",
-			"command":"ninja",
-			"args":[
-        "-j4"
-      ],
-			"group":{
-				"kind":"build",
-				"isDefault":true
-			}
-		}
-	]
+      "label": "自动构建Debug"
+    },
+    {
+      "type": "process",
+      "command": "./ab",
+      "args": [],
+      "label": "自动构建Release"
+    }
+  ]
 }
