@@ -44,6 +44,7 @@ int main(void)
     GuiSetFont(F12);
     while (!WindowShouldClose())
     {
+        //更新游戏状态
         UpdateMusicStream(BGM);
         moved=false;
         if(IsKeyDown(KEY_S)){

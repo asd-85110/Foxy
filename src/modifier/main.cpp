@@ -59,7 +59,7 @@ int main(void){
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     glfwSwapInterval(1);
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGuiIO& io = ImGui::GetIO();
     io.IniFilename = "../ModifierImGuiConfigure.ini";
     io.Fonts->Clear();
     io.Fonts->AddFontFromFileTTF("../res/Font/SourceHanSansHWSC-Bold.otf", 15.0f,nullptr, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
@@ -97,6 +97,12 @@ int main(void){
         ImGui::End();
         ImGui::Begin(gettext("Count Window"));
         ImGui::End();
+        ImGui::Begin(gettext("Settings"));
+            ImGui::Checkbox("ShowDemo",&Tools::ShowDemo);
+        ImGui::End();
+        if(Tools::ShowDemo){
+            ImGui::ShowDemoWindow();
+        }
         ImGui::EndFrame();
         ImGui::Render();
         int display_w, display_h;

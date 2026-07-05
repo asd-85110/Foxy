@@ -23,6 +23,7 @@ add_executable(modifier
     ${CMAKE_SOURCE_DIR}/src/modifier/imgui_impl_glfw.cpp
     ${CMAKE_SOURCE_DIR}/src/modifier/imgui_impl_opengl3.cpp
     ${CMAKE_SOURCE_DIR}/src/modifier/imgui_tables.cpp
+    ${CMAKE_SOURCE_DIR}/src/modifier/imgui_demo.cpp
     ${CMAKE_SOURCE_DIR}/src/modifier/tools.cpp)
 target_compile_options(game PRIVATE -Wno-enum-compare)
 if(WIN32)

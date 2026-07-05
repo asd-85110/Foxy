@@ -102,4 +102,5 @@ load_png(const char* filename, int* width, int* height) {
     }
 }
 int Values[4];
+bool ShowDemo=true;
 }// namespace Tools
