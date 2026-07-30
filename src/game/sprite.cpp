@@ -18,6 +18,8 @@ namespace sprite{
         texture=t;
         position=p;
         health=h;
+        this->h=t.height/4;
+        this->w=t.width/3;
     }
     player::~player(){
         UnloadTexture(texture);
@@ -53,5 +55,13 @@ namespace sprite{
     }
     item::~item(){
         UnloadTexture(texture);
+    }
+    BackGround::BackGround(Texture2D b){
+        bg=b;
+        pos.x=-(b.width/2)+400;
+        pos.y=-(b.height/2)+300;
+    }
+    BackGround::~BackGround(){
+        UnloadTexture(bg);
     }
 };

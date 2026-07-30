@@ -34,6 +34,7 @@ namespace Event{
         {465,36,29,26},//破陶瓷杯
         {496,22,17,40}//喷漆瓶
     };
+    int scene=S_FLOWER_SEA;
     bool Init(Texture2D B,Texture2D H,Texture2D F){
         if(IsTextureValid(B)&&IsTextureValid(H)&&IsTextureValid(F)){
             health_bar=B;

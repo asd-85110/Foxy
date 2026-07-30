@@ -39,5 +39,9 @@ namespace Event{
     ///\brief 回收物相关变量
     extern Texture2D Recycles;
     extern const Rectangle Recycle[16];
+    extern int scene;
+    enum SCENE{
+        S_FLOWER_SEA=1
+    };
 }
 #endif

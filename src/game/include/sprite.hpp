@@ -33,20 +33,28 @@ namespace sprite{
         item(Texture2D t,std::string n);
         ~item();
     };
-    class player
-    {
+    class player{
     private:
         //Frame w=48,h=64
         Vector2 Frame={0,0};// 纹理帧位置.[0]行,[1]列
-        Texture2D texture;/// \brief 纹理对象
-        Rectangle bounds={0,0,48,64};/// \brief 纹理边界框
-        std::uint64_t xp;/// \brief 玩家经验值
-        std::vector<item> carry_things;/// \brief 玩家携带物品列表
-        const float FrameSpeed=0.125;/// \brief 帧率，用于控制动画速度
-        float timer=0;/// \brief 计时器，用于控制动画帧率
+        ///\brief 纹理对象
+        Texture2D texture;
+        /// \brief 纹理边界框
+        Rectangle bounds={0,0,48,64};
+        /// \brief 玩家经验值
+        std::uint64_t xp;
+        /// \brief 玩家携带物品列表
+        std::vector<item> carry_things;
+        /// \brief 帧率，用于控制动画速度
+        const float FrameSpeed=0.125;
+        /// \brief 计时器，用于控制动画帧率
+        float timer=0;
     public:
-        std::uint8_t health,speed,damge;/// \brief 玩家属性
-        Vector2 position;/// \brief 玩家位置
+        /// \brief 玩家属性
+        std::uint8_t health,speed,damge;
+        std::uint16_t h,w;
+        /// \brief 玩家位置
+        Vector2 position;
         enum tags{
             idle=0,// 枚举空闲标签
             walk=1,// 枚举行走标签(有动画)
@@ -82,6 +90,14 @@ namespace sprite{
          * \note 纹理对象资源卸载必须在玩家析构函数中进行，否则会造成内存泄漏。
         */
         ~player();
+    };
+    struct BackGround{
+        ///\brief 背景纹理
+        Texture2D bg;
+        ///\brief 坐标状态
+        Vector2 pos;
+        BackGround(Texture2D);
+        ~BackGround();
     };
 }
 #endif
